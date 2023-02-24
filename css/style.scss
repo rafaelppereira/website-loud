@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+// INICIO DOS ESTILOS GLOBAIS
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #fff;
+    --dark: #000;
+    --loud: #13FF00;
+    --gray: #9B9B9B;
+    --darkgrey: #1F1F1F;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+// FINAL DOS ESTILOS GLOBAIS
+
+.container {
+    background: linear-gradient(180deg, #000000 10.65%, #13FF00 55.39%);
+
+    width: 100%;
+    height: 1070px;
+
+    padding: 0 60px;
+}
+
+
+// INICIO ESTILOS DO HEADER 
+
+header {
+    width: 100%;
+    padding: 45px 0;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: all 0.5s;
+
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 86px;
+    }
+
+    .nav-menu li a {
+        font-weight: 600;
+        font-size: 17px;
+
+        color: var(--white);
+
+        transition: all 0.2s;
+    }
+
+    li a:hover {
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    .cart {
+        width: 45px;
+        height: 45px;
+
+        background-color: var(--darkgrey);
+
+        border-radius: 10px;
+
+        cursor: pointer;
+        transition: all 0.5s;
+
+        a i {
+            color: var(--white);
+            font-size: 35px;
+            padding: 5px 5px;
+        }
+
+        &:hover {
+            background-color: #9B9B9B;
+        }
+
+    }
+
+    .club {
+        background-color: var(--darkgrey);
+        align-items: center;
+
+        height: 45px;
+        width: 150px;
+
+        border-radius: 30px;
+        border: 2px solid var(--white);
+
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            border: 2px solid var(--loud);
+        }
+
+        img {
+            padding: 10px 10px;
+        }
+
+    }
+}
+
+// FINAL ESTILOS DO HEADER 
+
+// INICIO DO CONTAINER PRINCIPAL
+
+.box-primary {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    transition: all 0.5s;
+
+
+    .image-main {
+        padding: 30px 0;
+        max-width: 1900px;
+        margin: 0 auto;
+
+        background-color: red;
+
+        transition: all 0.5s;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .buttons {
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+        height: 18px;
+
+        display: flex;
+        align-items: center;
+
+        background-color: rgb(0, 107, 5);
+
+        
+
+        .buttom-loud {
+            background-color: var(--dark);
+
+            padding: 0 60px;
+
+            border-radius: 0px 0px 0px 30px;
+            border: 3px solid var(--white);
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--darkgrey);
+            }
+        }
+
+        .buttom-loudstore {
+            background-color: var(--dark);
+
+            padding: 10px 19px;
+
+            border-radius: 0px 0px 30px 0px;
+            border: 3px solid var(--white);
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--darkgrey);
+            }
+        }
+    }
+
+    .min-catalog {
+        display: flex;
+        margin: -35px;
+        padding: 0px 40px;
+        gap: 70px;
+
+        font-family: 'Poppins', sans-serif;;
+
+        img {
+            border-radius: 30px 30px 0px 0px;
+        }
+
+        .photo {
+            cursor: pointer;
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            font-weight: 100;
+            font-size: 15px;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        span {
+            font-weight: 300;
+            font-size: 20px;
+        }
+    }
+}
