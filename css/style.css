@@ -25,7 +25,7 @@ ul, a {
 .container {
   background: linear-gradient(180deg, #000000 10.65%, #13FF00 55.39%);
   width: 100%;
-  height: 1070px;
+  height: 95vh;
   padding: 0 60px;
 }
 
@@ -52,6 +52,12 @@ header .nav-menu li a {
 header li a:hover {
   font-weight: 800;
   font-size: 25px;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 header .cart {
   width: 45px;
@@ -86,31 +92,38 @@ header .club img {
   padding: 10px 10px;
 }
 
+
+
 .box-primary {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   transition: all 0.5s;
+
 }
 .box-primary .image-main {
-  padding: 30px 0;
-  max-width: 1900px;
+  width: 100%;
+  height: 400px;
   margin: 0 auto;
-  background-color: red;
+  
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
   transition: all 0.5s;
 }
 .box-primary .image-main img {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 .box-primary .buttons {
-  max-width: 1600px;
   width: 100%;
-  margin: 0 auto;
-  height: 18px;
+
+  margin-top: 16px;
+  
   display: flex;
   align-items: center;
-  background-color: rgb(0, 107, 5);
+  justify-content: space-between;
 }
 .box-primary .buttons .buttom-loud {
   background-color: var(--dark);
@@ -132,33 +145,122 @@ header .club img {
 .box-primary .buttons .buttom-loudstore:hover {
   background-color: var(--darkgrey);
 }
-.box-primary .min-catalog {
+.lookbook .min-catalog {
   display: flex;
-  margin: -35px;
-  padding: 0px 40px;
   gap: 70px;
   font-family: "Poppins", sans-serif;
+
+  margin-top: -480px;
 }
-.box-primary .min-catalog img {
+.lookbook .min-catalog img {
   border-radius: 30px 30px 0px 0px;
+  height: 100%;
 }
-.box-primary .min-catalog .photo {
+.lookbook .min-catalog .photo {
   cursor: pointer;
+  height: 400px;
+
 }
-.box-primary .min-catalog .description {
+
+.lookbook .min-catalog .photo:nth-of-type(2) {
+  height: 430px;
+}
+.lookbook .min-catalog .description {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.box-primary .min-catalog p {
+.lookbook .min-catalog p {
   font-weight: 100;
   font-size: 15px;
 }
-.box-primary .min-catalog h1 {
+.lookbook .min-catalog h1 {
   font-weight: 600;
   font-size: 20px;
 }
-.box-primary .min-catalog span {
+.lookbook .min-catalog span {
   font-weight: 300;
   font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
+
+.lookbook {
+  background-color: var(--darkgrey);
+  width: 100%;
+  padding: 100px 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1800px) {
+  .lookbook .min-catalog .photo:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  .lookbook .min-catalog .photo:nth-of-type(1) {
+    display: none;
+  }
+}
+
+@media(max-width: 1500px) {
+  header .nav-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .lookbook .min-catalog {
+    margin-top: -400px;
+  }
+}
+
+@media(max-width: 768px) {
+
+  .container {
+    height: auto;
+    padding: 50px 60px;
+  }
+
+  .lookbook .min-catalog {
+    margin-top: 0;
+  }
+
+  .lookbook .min-catalog .photo:nth-of-type(1),
+  .lookbook .min-catalog .photo:nth-of-type(2) {
+    display: block;
+  }
+
+  .lookbook .min-catalog {
+    flex-direction: column;
+  }
+
+
+  .lookbook .min-catalog {
+    width: 100%;
+    padding: 0 60px;
+  }
+  .lookbook .min-catalog img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .cart-container {
+    gap: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 20px
+  }
+
+  .buttom-loud, .buttom-loudstore {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px !important;
+  } 
+
+
+} 
